@@ -1,0 +1,99 @@
+/* CSS Document */
+
+
+nav ul {
+	margin:10px;
+	margin-top:calc(5em + 10px);
+	position:fixed;
+}
+nav ul li {
+	padding-bottom:10px;
+}
+nav ul li:last-of-type {
+	padding-bottom:0px;
+}
+nav  ul li a {
+	color:black;
+	text-decoration:none;
+	font-family: TitleFont;
+	font-size: 1.25em;
+}
+nav  ul li a:hover {
+	font-weight:bold;
+}
+nav  ul li a:active {
+	font-weight:bold;
+} 
+nav b {
+	font-size: 0.75em;
+	font-weight:normal;
+	vertical-align: middle;
+}
+
+@media all and (max-width: 600px) {
+	#container {
+	display: flex;
+	flex-direction:column;
+	}
+  nav {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+	width:100%;
+	overflow:hidden;
+	transition:all 0.5s;
+	position:relative;
+	top:0px;
+	opacity:1;
+  }
+  .collaps{
+	  height:0px;
+	transition:all 0.5s;
+	top:-40px;
+	opacity:0;
+  }
+
+  nav ul{
+	  position:relative;
+	  margin:0 ;
+	  text-align: center;
+  }
+
+  nav a {
+    text-align: center;
+    padding: 10px;
+  }
+
+	  nav li:last-of-type a {
+    border-bottom: none;
+  }
+  nav  ul li a {
+	  font-size:2em;
+  }
+  
+  #nav_dropper {
+	  display:inline-block;
+	  position:relative;
+	  padding-left: 1.25em;
+	  margin: 0 auto;
+	  cursor: pointer;
+	  align-self: center;
+  }
+  #nav_dropper:before {
+       content: "";
+    position: absolute;
+    top: 0.33em;
+    left: 0;
+    width: 2em;
+    height: 0.33em;
+    border-top: 0.9em double #000;
+    border-bottom: 0.33em solid #000;
+  }
+  #nav_dropper:after {
+	     content: "";
+	  width:100%;
+	      display: block;
+		  position:relative;
+		  height: 2em;
+  }
+}
